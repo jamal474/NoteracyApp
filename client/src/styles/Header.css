@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+a,Link {
+  text-decoration: inherit;
+  color : inherit;
+}
+
+.signup {
+  margin: 0px 5px;
+  background-color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  transition: all 0.2s linear;
+}
+
+/* #12296c */
+.signup:hover {
+  background-color: #FFC700;
+  cursor : pointer;
+}
+
+.signin {
+  margin: 0px 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+  border: 2px solid white;
+  font-weight: 600;
+  color: white;
+}
+
+.signin:hover {
+  border: 2px solid #FFC700;
+  color: #FFC700;
+  cursor : pointer;
+}

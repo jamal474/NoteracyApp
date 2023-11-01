@@ -1,0 +1,114 @@
+.Dashboard {
+    background-image: url('../assets/images/LayingDoodle.svg');
+    background-repeat: no-repeat;
+    background-size: 20vw;
+    background-position: 90% 0%;
+    min-height : 100vh;
+    /* display: flex;
+    flex-direction: column;
+     */
+}
+
+.Dashboard-body {
+    max-width: 80vw;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 15%;
+}
+
+.Dboard-intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Heyuser {
+    margin-right: auto;
+    font-size: 2.3rem;
+    background: -webkit-linear-gradient(45deg, hsl(220deg 100% 55%), #f9dd94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.newNotebtn {
+    margin: 0px 5px;
+    background-color: #FFC700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    transition: all 0.2s linear;
+}
+
+.newNotebtn:hover {
+    box-shadow: -2px -2px 1px white, 2px 2px 1px hsl(220deg 100% 55%);
+}
+
+.Dboard-body {
+    display : flex;
+    flex-direction: column;
+}
+
+.Dboard-notes {
+    display : flex;
+    height : 70vh;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    justify-content: space-around;
+    
+}
+
+.pagination {
+    display : flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.pagination-off {
+    display: none;
+}
+
+.pagination-btn {
+    margin: 0px 5px;
+    background-color: #FFC700;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    width : 100px;
+    transition: all 0.2s linear;
+}
+
+.pagination-btn:hover {
+    cursor : pointer;
+}
+
+.btn-disabled {
+    background-color: grey;
+}
+
+.btn-disabled:hover {
+    cursor : not-allowed;
+}
+
+.Dboard-new-notes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Dboard-new-msg{
+    font-size: 3rem;
+    background: -webkit-linear-gradient(45deg, hsl(220deg 100% 55%), #f9dd94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

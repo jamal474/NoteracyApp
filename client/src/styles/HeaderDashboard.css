@@ -1,0 +1,62 @@
+.headerDashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.logo {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+
+  .logout {
+    margin: 0px 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    border: 2px solid white;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .logout:hover {
+    border: 2px solid #FFC700;
+    color: #FFC700;
+  }
+
+  .search-bar {
+    width: 55%;
+    margin: 0px auto;
+    line-height: 56px;
+    position: relative;
+  }
+  
+  input {
+    padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+  }
+  .search-input {
+    width: 89%;
+    height: 33px;
+    padding: 0 10px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: white;
+    background: linear-gradient(black, black) padding-box,
+        linear-gradient(45deg, hsl(220deg 100% 55%), #f9dd94)border-box;
+    border-radius: 50em;
+    border: 2px solid transparent;
+    z-index: 2;
+  }
+  
+  .search-input:focus {
+    border: 1.1px solid orange;
+    box-shadow: 0 1px 2px rgba(0,0,0,.4);
+  }

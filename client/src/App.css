@@ -1,0 +1,44 @@
+
+:root {
+  --bg-color : #FFC700;
+  --p-rgb : white;
+}
+
+body {
+  font-family : 'Poppins', sans-serif;
+  background-color: black;
+  color : var(--p-rgb);
+  font-weight: 300;
+  font-size: 1.2rem;
+  background-image: url(./assets/images/noise-bg.png);
+  overflow-x: hidden;
+}
+
+a:hover, button:hover {
+  /* cursor: none; */
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family : 'unbounded', cursive;
+  font-weight: 800;
+}
+
+.cursor {
+  height: 1.1vw;
+  width : 1.1vw;
+  background-color: orange;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  position: absolute;
+  transition: all linear 0.1s;
+}
+
+a,
+form,
+input,
+button {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+
