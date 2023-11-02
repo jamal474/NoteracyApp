@@ -3,6 +3,7 @@ import HeaderDashboard from '../components/HeaderDashboard'
 import { useParams } from 'react-router-dom'
 import SearchRes from '../components/SearchRes'
 import BASE_URL from '../helper'
+import SEO from '../components/SEO'
 
 const SearchNote = () => {
     const { query } = useParams();
@@ -43,6 +44,11 @@ const SearchNote = () => {
 
     return (
         <div className="searchNote">
+            <SEO
+                title="Search Notes - Noteracy"
+                description="Always have your Notes at the tip of your finger with Search"
+                name="@lamajribbahs"
+                image="../assets/icons/icon96.ico" />
             <HeaderDashboard/>
             <div className="searchResult">
                 {res}

@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import ViewNoteBody from '../components/ViewNoteBody'
 import { useParams } from 'react-router-dom';
 import BASE_URL from '../helper'
-
+import SEO from '../components/SEO'
 
 const ViewNote = () => {
     const { nId } = useParams();
@@ -36,6 +36,11 @@ const ViewNote = () => {
     }, [nId] )
   return (
     <div className = "ViewNote">
+        <SEO
+                title="View Note - Noteracy"
+                description="Noteracy: Your connected workspace for taking, managing, and organizing notes. Write your thoughts as they come to you, create, update, delete, and search notes effortlessly. A versatile note-taking solution for all your ideas and tasks"
+                name="@lamajribbahs"
+                image="../assets/icons/icon96.ico" />
         <HeaderDashboard/>
         {bd}
         <Footer clname = {"footer"}/>

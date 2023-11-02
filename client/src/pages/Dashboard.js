@@ -4,7 +4,7 @@ import HeaderDashboard from '../components/HeaderDashboard'
 import Footer from '../components/Footer'
 import NoteElement from '../components/NoteElement.js'
 import '../styles/Dashboard.css'
-
+import SEO from '../components/SEO'
 
 const Dashboard = () => {
 
@@ -25,7 +25,6 @@ const Dashboard = () => {
                 .then(res => res.json())
                 .then(data => {
                     setUserD(data);
-
                     if (data.notes.length > 0) {
                         const noteElements = data.notes.map((note) => (
                             <NoteElement
@@ -56,6 +55,11 @@ const Dashboard = () => {
 
     return (
         <div className="Dashboard">
+            <SEO
+                title=" Dashboard - Noteracy"
+                description="Noteracy: Your connected workspace for taking, managing, and organizing notes. Write your thoughts as they come to you, create, update, delete, and search notes effortlessly. A versatile note-taking solution for all your ideas and tasks"
+                name="@lamajribbahs"
+                image="../assets/icons/icon96.ico" />
             <HeaderDashboard />
             <div className="Dashboard-body">
                 <div className="Dboard-intro">
@@ -66,8 +70,8 @@ const Dashboard = () => {
                     {currNote}
                 </div>
                 <div className={pageOff ? "pagination-off pagination" : "pagination"}>
-                    <button className={page === 1 ? "pagination-btn btn-disabled" : "pagination-btn"} disabled={page === 1} onClick={() => { setPage(page - 1) }}>Previous</button>
-                    <button className={page === userD.pages ? "pagination-btn btn-disabled" : "pagination-btn"} disabled={page === userD.pages} onClick={() => { setPage(page + 1) }}>Next</button>
+                    <button className={page === 1 ? "pagination-btn btn-disabled" : "pagination-btn"} disabled={page === 1} onClick={() => { setPage(page - 1);}}>Previous</button>
+                    <button className={page === userD.pages ? "pagination-btn btn-disabled" : "pagination-btn"} disabled={page === userD.pages} onClick={() => { setPage(page + 1);}}>Next</button>
                 </div>
             </div>
             <Footer clname={"footer"} />

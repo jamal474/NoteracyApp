@@ -5,6 +5,7 @@ import HeaderDashboard from '../components/HeaderDashboard'
 import Footer from '../components/Footer'
 import CustomAlert from '../components/CustomAlert';
 import BASE_URL from '../helper'
+import SEO from '../components/SEO'
 
 const AddNote = () => {
     const [title, setTitle] = React.useState("");
@@ -39,6 +40,11 @@ const AddNote = () => {
     }
     return (
         <div className="addNote">
+            <SEO
+                title="Add Note - Noteracy"
+                description="Write your thoughts as they come to you, create, update, delete, and search notes effortlessly. A versatile note-taking solution for all your ideas and tasks"
+                name="@lamajribbahs"
+                image="../assets/icons/icon96.ico" />
             <HeaderDashboard />
             <div className="addNoteBody">
                 <div className="breadcrumb">

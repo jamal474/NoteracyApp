@@ -1,5 +1,4 @@
 import './App.css';
-
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Landing from './pages/Landing'
@@ -8,6 +7,7 @@ import Unauth from './components/Unauth';
 import ViewNote from './pages/ViewNote';
 import AddNote from './pages/AddNote'
 import SearchNote from './pages/SearchNote'
+
 
 function App() {
   const [user, setUser] = React.useState(null);

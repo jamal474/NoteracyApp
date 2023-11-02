@@ -4,8 +4,7 @@ const mongoose = require('mongoose')
 exports.dashboard = async (req, res) => {
 
     let perPage = 6;
-    let page = req.querypage || 1;
-
+    let page = req.query.page || 1;
     try {
 
         const notes = await Note.aggregate([
@@ -140,6 +139,6 @@ exports.dashboardSearchSubmit = async (req, res) => {
         
     }
     catch (error) {
-        console.log(error);
+        (error);
     }
 }
