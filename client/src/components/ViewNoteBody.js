@@ -3,7 +3,6 @@ import { Link,} from 'react-router-dom';
 import CustomAlert from './CustomAlert';
 import ModalDelete from './ModalDelete';
 import BASE_URL from '../helper';
-// import Loading from './Loading'
 
 const ViewNoteBody = (props) => {
     const [title, setTitle] = React.useState(props.title);
@@ -47,24 +46,16 @@ const ViewNoteBody = (props) => {
         setShowModal(false);
     };
 
-    // const [loading, setLoading] = React.useState(true)
-    // React.useEffect(() => {
-    //     setTimeout(() => setLoading(false), 800)
-    // }, [])
-    // if (loading) {
-    //     return <Loading/>
-    // }
-
     return (
         <div className="viewNoteBody">
             <div className="breadcrumb">
-                <Link to="/dashboard" className="bc-p1">Dashboard</Link>
+                <Link to="/dashboard" className="bc-d">Dashboard</Link>
                 <div className="bc-sep">/</div>
                 <div className="bc-p2">{props.title.substring(0, 40)} {dotdotdot}</div>
             </div>
             <div className="view-delete">
                 <h4>View Note</h4>
-                <div className="deleteStarter" onClick={openModal}>Delete</div>
+                <div className="openDeleteModal" onClick={openModal}>Delete</div>
             </div>
             <form className="update-form" action={`${BASE_URL}/api/v1/dashboard/item/${props.id}?_method=PUT`} method="POST" onSubmit={handleSubmit}>
                 <input className="up-title" type="text" id="title" name="title" value={title} onChange={(e) => { setTitle(e.target.value)}} placeholder="Title"  required/>

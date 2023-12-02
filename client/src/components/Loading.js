@@ -1,18 +1,16 @@
 import React from 'react'
-import '../styles/Loading.css'
-const Loading = () => {
+import load from '../assets/images/noteracyLoad.gif'
+import "../styles/Loading.css"
+const Loading = (props) => {
+    if (!props.isloading) {
+        return null;
+    }
+    
     return (
-        <div class="center">
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
+        <div className="loadingScreen">
+            <div id="animation-container">
+                <img src = {load}/>
+            </div>
         </div>
     )
 }

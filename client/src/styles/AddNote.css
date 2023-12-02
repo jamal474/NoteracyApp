@@ -14,7 +14,7 @@
 
 .bc-p1 {
     margin: 0px 10px 0px 0px;
-    color: yellow;
+    color: #FFC700;
 }
 
 .bc-p1:hover {
@@ -49,7 +49,7 @@
     color: black;
     font-family: unbounded;
     padding-left: 2%;
-    border: 2px solid yellow;
+    border: 2px solid #FFC700;
 }
 
 .add-body {
@@ -62,7 +62,7 @@
     color: black;
     padding-left: 2%;
     padding-top: 20px;
-    border: 1px solid yellow;
+    border: 1px solid #FFC700;
 }
 
 .add-submit {
@@ -70,28 +70,12 @@
     font-family: unbounded;
     width: 130px;
     height: 35px;
-    border-radius: 10px;
+    border-radius: 2px;
     border: 0px;
-    background-color: yellow;
+    background-color: #FFC700;
 }
 
 .add-submit:hover {
     cursor: pointer;
-    background-color: rgb(255, 255, 55)
-}
-
-.deleteStarter {
-    margin: 0px 5px;
-    background-color: yellow;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: black;
-    transition: all 0.2s linear;
-}
-
-.deleteStarter:hover {
-    background-color: rgb(172, 172, 2);
-    cursor: pointer;
+    filter : brightness(115%);
 }

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const SearchRes = (props) => {
   return (
-    <div className = "searchList">
-        <Link to = {`/dashboard/viewNote/${props.id}`}>
-                <h2>{props.title}</h2>
-        </Link>
+    <div className="searchList">
+      <Link to={`/dashboard/viewNote/${props.id}`}>
+        <h2 className="result-topic">{props.title}</h2>
+      </Link>
     </div>
   )
 }

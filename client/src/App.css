@@ -11,26 +11,26 @@ body {
   font-weight: 300;
   font-size: 1.2rem;
   background-image: url(./assets/images/noise-bg.png);
+  background-image: linear-gradient(45deg, black, black, #1d3557);
+  background-repeat: no-repeat;
   overflow-x: hidden;
 }
 
-a:hover, button:hover {
-  /* cursor: none; */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #FFC700;
+  border-radius : 5px;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family : 'unbounded', cursive;
   font-weight: 800;
-}
-
-.cursor {
-  height: 1.1vw;
-  width : 1.1vw;
-  background-color: orange;
-  mix-blend-mode: difference;
-  border-radius: 50%;
-  position: absolute;
-  transition: all linear 0.1s;
 }
 
 a,

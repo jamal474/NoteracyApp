@@ -5,6 +5,7 @@ exports.dashboard = async (req, res) => {
 
     let perPage = 6;
     let page = req.query.page || 1;
+
     try {
 
         const notes = await Note.aggregate([
@@ -28,10 +29,11 @@ exports.dashboard = async (req, res) => {
             .skip(perPage * page - perPage)
             .limit(perPage)
             .exec();
-
-        const count = await Note.count();
+        console.log()
+        const count = await Note.where({ 'user': new mongoose.Types.ObjectId(req.user.id) }).count();
         res.status(201).send({
             userName: req.user.firstName,
+            profileImg: req.user.profileImage,
             notes: notes,
             current: page,
             pages: Math.ceil(count / perPage)
@@ -39,7 +41,7 @@ exports.dashboard = async (req, res) => {
 
     }
     catch (error) {
-        console.log(`${error}`);
+        console.log(error);
     }
 
 }
@@ -54,7 +56,8 @@ exports.dashboardViewNote = async (req, res) => {
     if (note) {
         res.status(201).send({
             noteID: req.params.id,
-            note
+            note,
+            profileImg: req.user.profileImage,
         });
     }
     else {
@@ -97,7 +100,7 @@ exports.dashboardDeleteNote = async (req, res) => {
 }
 
 
-exports.dashboardAddNoteSubmit = async (req, res) => {
+exports.dashboardAddNote = async (req, res) => {
     try {
         req.body.user = req.user.id;
         let result = await Note.create(req.body);
@@ -114,9 +117,9 @@ exports.dashboardAddNoteSubmit = async (req, res) => {
     }
 }
 
-exports.dashboardSearchSubmit = async (req, res) => {
+exports.dashboardSearch = async (req, res) => {
     try {
-        let searchTerm = req.body.searchTerm;
+        let searchTerm = req.params.searchTerm;
         const searchNoSpecialChars = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "");
 
         const searchResults = await Note.find({
@@ -128,7 +131,10 @@ exports.dashboardSearchSubmit = async (req, res) => {
 
         if(searchResults)
         {
-            res.status(201).send(searchResults);
+            res.status(201).send({
+                notes : searchResults,
+                profileImg: req.user.profileImage,
+            });
         }
         else
         {
@@ -139,6 +145,6 @@ exports.dashboardSearchSubmit = async (req, res) => {
         
     }
     catch (error) {
-        (error);
+        console.log(error);
     }
 }

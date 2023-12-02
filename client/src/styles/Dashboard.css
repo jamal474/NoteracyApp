@@ -1,12 +1,5 @@
 .Dashboard {
-    background-image: url('../assets/images/LayingDoodle.svg');
-    background-repeat: no-repeat;
-    background-size: 20vw;
-    background-position: 90% 0%;
     min-height : 100vh;
-    /* display: flex;
-    flex-direction: column;
-     */
 }
 
 .Dashboard-body {
@@ -28,7 +21,7 @@
 
 .Heyuser {
     margin-right: auto;
-    font-size: 2.3rem;
+    font-size: 2rem;
     background: -webkit-linear-gradient(45deg, hsl(220deg 100% 55%), #f9dd94);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -38,7 +31,7 @@
     margin: 0px 5px;
     background-color: #FFC700;
     padding: 4px 10px;
-    border-radius: 20px;
+    border-radius: 2px;
     font-size: 1rem;
     font-weight: 600;
     color: black;
@@ -61,42 +54,52 @@
     margin-right: 0px;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    justify-content: space-around;
+    justify-content: space-between;
     
 }
 
 .pagination {
     display : flex;
     justify-content: center;
+    align-items: center;
     margin-top: 0px;
     margin-bottom: 20px;
 }
+
 .pagination-off {
     display: none;
 }
 
 .pagination-btn {
-    margin: 0px 5px;
-    background-color: #FFC700;
-    padding: 4px 10px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: black;
-    width : 100px;
+    width : 40px;
     transition: all 0.2s linear;
 }
 
 .pagination-btn:hover {
     cursor : pointer;
+    filter : sepia();
 }
 
+.pagination-number{
+    width : 30px;
+    text-align: center;
+    font-size: 20px;
+    margin : 0px 10px;
+}
+.pagination-number-curr{
+    width : 50px;
+    font-size: 30px;
+    text-align: center;
+    color : #FFC700;
+    background-color: rgba(128, 128, 128,0.3);
+}
 .btn-disabled {
-    background-color: grey;
+    filter: invert(50%);
 }
 
 .btn-disabled:hover {
     cursor : not-allowed;
+    filter : invert(50%);
 }
 
 .Dboard-new-notes{

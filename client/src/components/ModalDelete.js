@@ -20,7 +20,7 @@ function ModalDelete(props) {
     const handleNoteDelete = async (e) => {
         e.preventDefault();
         try {
-            await fetch(`${BASE_URL}/dashboard/item-delete/${props.id}?_method=DELETE`, {
+            await fetch(`${BASE_URL}/api/v1/dashboard/item-delete/${props.id}?_method=DELETE`, {
                 method: "POST",
                 credentials: "include"
             })

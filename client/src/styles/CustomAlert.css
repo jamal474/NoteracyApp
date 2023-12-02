@@ -1,9 +1,10 @@
 .custom-alert {
-    position: fixed;
-    top: 5%;
-    left: 50%;
-    background-color: yellow;
-    color: black;
-    padding: 10px;
-    border-radius: 2px;
-  }
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  background-color: #FFC700;
+  color: black;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 2px;
+}

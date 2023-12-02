@@ -16,26 +16,9 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 </head>
-</head>
 
 <body>
   <div id="root"></div>
-  <div class="cursor"></div>
-  <script type="text/javascript">
-    var root = document.querySelector("#root")
-    var crsr = document.querySelector(".cursor")
-    root.addEventListener("mousemove", function (e) {
-      var x = e.clientX;
-      var y = e.clientY;
-
-
-      x += window.scrollX;
-      y += window.scrollY;
-
-      crsr.style.left = String(Number(x) + 20) + "px";
-      crsr.style.top = String(Number(y) - 14) + "px";
-    })
-  </script>
 </body>
 
 </html>

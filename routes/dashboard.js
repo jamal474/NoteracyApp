@@ -8,6 +8,6 @@ router.get('/api/v1/dashboard/item/:id', isLoggedIn, dashboardController.dashboa
 router.put('/api/v1/dashboard/item/:id', isLoggedIn, dashboardController.dashboardUpdateNote);
 router.delete('/api/v1/dashboard/item-delete/:id', isLoggedIn, dashboardController.dashboardDeleteNote);
 
-router.post('/api/v1/dashboard/add', isLoggedIn, dashboardController.dashboardAddNoteSubmit);
-router.get('/api/v1/dashboard/search/:query', isLoggedIn, dashboardController.dashboardSearchSubmit);
+router.post('/api/v1/dashboard/add', isLoggedIn, dashboardController.dashboardAddNote);
+router.get('/api/v1/dashboard/search/:searchTerm', isLoggedIn, dashboardController.dashboardSearch);
 module.exports = router

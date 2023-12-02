@@ -13,9 +13,7 @@ function App() {
   const [user, setUser] = React.useState(null);
 
     React.useEffect(() => {
-        // Make an API request to your server to check the authentication status.
-        // If the user is authenticated, the API should return user data.
-        fetch('/check-auth-status')
+        fetch('/api/v1/check-auth-status')
             .then((response) => {
                 if (response.status === 200) {
                     // User is authenticated, set the user data.
@@ -29,12 +27,6 @@ function App() {
               setUser(userData);
             });
     }, []);
-
-    // if (!user) {
-    //     // User is not logged in or an error occurred.
-    //     return <Redirect to="/" />;
-    // }
-    
 
   return (
     <div>

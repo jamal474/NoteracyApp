@@ -3,6 +3,7 @@ import '../styles/ViewNote.css'
 import HeaderDashboard from '../components/HeaderDashboard'
 import Footer from '../components/Footer'
 import ViewNoteBody from '../components/ViewNoteBody'
+import Loading from '../components/Loading.js'
 import { useParams } from 'react-router-dom';
 import BASE_URL from '../helper'
 import SEO from '../components/SEO'
@@ -10,6 +11,9 @@ import SEO from '../components/SEO'
 const ViewNote = () => {
     const { nId } = useParams();
     const [bd,setBd] = React.useState();
+    const [profileImg,setProfileImg] = React.useState("");
+    const [isLoading, setIsLoading] = React.useState(false);
+
     React.useEffect(() => {
         try {
             fetch(`${BASE_URL}/api/v1/dashboard/item/${nId}`, {
@@ -21,6 +25,7 @@ const ViewNote = () => {
             })
                 .then(res => res.json())
                 .then(data => {
+                    setProfileImg(data.profileImg);
                     const noteEle = <ViewNoteBody
                     key = {data.note._id}
                     id={data.note._id}
@@ -41,7 +46,10 @@ const ViewNote = () => {
                 description="Noteracy: Your connected workspace for taking, managing, and organizing notes. Write your thoughts as they come to you, create, update, delete, and search notes effortlessly. A versatile note-taking solution for all your ideas and tasks"
                 name="@lamajribbahs"
                 image="../assets/icons/icon96.ico" />
-        <HeaderDashboard/>
+        <HeaderDashboard profileUrl = {profileImg}/>
+        <Loading
+                isloading={isLoading}
+                setIsLoading={setIsLoading} />
         {bd}
         <Footer clname = {"footer"}/>
     </div>
