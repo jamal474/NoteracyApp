@@ -8,7 +8,7 @@ const passport = require('passport');
 const MongoStore = require('connect-mongo');
 const cors = require('cors');
 const app = express();
-const port = 5000 || process.env.PORT;
+const port = process.env.PORT;
 const path = require('path')
 
 app.use(session({
@@ -32,11 +32,12 @@ app.use(cors({
 }));
 connectDB()
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+
 app.use('/',require('./routes/auth'));
 app.use('/',require('./routes/dashboard'));
 app.use('/', require('./routes/user'));
 
-app.use(express.static(path.join(__dirname, "./client/build")));
 app.get("*", function (_, res) {
     res.sendFile(
         path.join(__dirname, "./client/build/index.html"),
